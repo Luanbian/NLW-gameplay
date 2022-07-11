@@ -1,7 +1,7 @@
 import {View, Image, Text} from 'react-native';
 import {styles} from './styles';
 import IllustrationImg from '../../assets/illustration.png'
-import {ButtonIcon} from '../../components/buttonIcon/Button'
+import { ButtonIcon } from '../../components/ButtonIcon/Button';
 
 export function SignIn(){
     return(
