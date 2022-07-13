@@ -9,7 +9,7 @@ export function AuthRoutes(){
         <Stack.Navigator
         screenOptions={{
                 cardStyle: {
-                    backgroundColor: "#070B24"
+                    backgroundColor: "#070B24" // transparent - fix later
                 },
                 headerShown: false
             }} 
