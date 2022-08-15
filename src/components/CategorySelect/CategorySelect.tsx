@@ -1,6 +1,6 @@
 import {styles} from './CategoryStyled';
 import {ScrollView, Text, View} from 'react-native';
-import { categories } from '../../utils/Categories';
+import { categories } from '../../utils/categories';
 import { Category } from '../Category';
 
 type Props = {
@@ -16,13 +16,17 @@ export function CategorySelect({categorySelected, setCategory}: Props){
             showsHorizontalScrollIndicator = {false}
             contentContainerStyle={{paddingRight: 40}}
         >
-           {categories.map((category):any => {
-                <View key={category.id}>
-                    <Text>
-                        {category.title}
-                    </Text>
-                </View>
-           })}
+            {
+                categories.map(category => (
+                    <Category
+                        key={category.id}
+                        title={category.title}
+                        icon={category.icon}
+                        checked={category.id === categorySelected}
+                        onPress={() => setCategory(category.id)}
+                    />
+                ))
+            }
         </ScrollView>
     )
 }

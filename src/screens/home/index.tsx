@@ -8,8 +8,8 @@ import { useState } from "react";
 export function Home() {
     const [category, setCategory] = useState('')
 
-    function handleCategorySelected(categoryId: string){
-        categoryId === category ? setCategory('') : setCategory(category);
+    function handleCategorySelect(categoryId: string){
+        categoryId === category ? setCategory('') : setCategory(categoryId);
     }
 
     return(
@@ -21,7 +21,7 @@ export function Home() {
             <View>
                 <CategorySelect
                     categorySelected={category}
-                    setCategory={handleCategorySelected}
+                    setCategory={handleCategorySelect}
                 />
             </View>
         </View>
